@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura | AI Safety Companion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#">AURA<span>.</span></a>
+        <span class="status">
+            <span class="dot"></span> Safety Dashboard
+        </span>
+    </header>
+
+```
+<main class="container">
+    <section class="hero">
+        <div class="eyebrow">YOUR PERSONAL AI SAFETY COMPANION</div>
+        <h1>Your safety.<br><span>Our priority.</span></h1>
+        <p>
+            A smarter way to feel safer. Activate SOS manually
+            or try voice activation using your secret keyword.
+        </p>
+
+        <button class="sos-button" id="sosButton">
+            <span class="sos-icon">!</span>
+            <strong>ACTIVATE SOS</strong>
+            <small>Press for emergency demo</small>
+        </button>
+
+        <p class="disclaimer">
+            Demo mode — no emergency services are contacted.
+        </p>
+    </section>
+
+    <section class="grid">
+        <article class="card">
+            <div class="card-icon">🎙️</div>
+            <h2>Voice Activation</h2>
+            <p>Say your secret keyword to test voice recognition.</p>
+            <button id="voiceButton">Start Listening</button>
+            <p class="result" id="voiceResult" aria-live="polite">
+                Voice activation is off.
+            </p>
+        </article>
+
+        <article class="card">
+            <div class="card-icon">📞</div>
+            <h2>Fake Call</h2>
+            <p>Preview a simulated incoming-call screen.</p>
+            <button id="fakeCallButton">Preview Fake Call</button>
+        </article>
+
+        <article class="card">
+            <div class="card-icon">🔊</div>
+            <h2>AI Scream Detection</h2>
+            <p>See the status of the planned audio AI module.</p>
+            <span class="badge">AI MODEL NOT CONNECTED</span>
+        </article>
+
+        <article class="card">
+            <div class="card-icon">🗺️</div>
+            <h2>Safety Map</h2>
+            <p>Open a map to explore public safety resources.</p>
+            <a class="button-link"
+               href="https://www.google.com/maps/search/police+stations/"
+               target="_blank" rel="noopener noreferrer">
+                Explore Safety Map
+            </a>
+        </article>
+    </section>
+
+    <section class="notice">
+        <strong>Safety first</strong>
+        <p>
+            This is a prototype, not a verified emergency-response
+            service. For a real emergency in India, call 112.
+            Do not rely on this demo for personal protection.
+        </p>
+    </section>
+</main>
+
+<div class="modal" id="modal" role="dialog"
+     aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-box">
+        <div class="card-icon" id="modalIcon">🛡️</div>
+        <h2 id="modalTitle">Aura Demo</h2>
+        <p id="modalText"></p>
+        <button id="closeModal">Close Demo</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+<button onclick="testBackend()">
+    Test Backend Connection
+</button>
+
+</body>
+</html>
